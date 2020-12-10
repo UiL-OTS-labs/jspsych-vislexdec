@@ -151,7 +151,6 @@
             response_ends_trial: true
         };
 
-
         let survey_multi_html_block = {
             type: 'survey-html-form',
             preamble: '<h5>' + PREPARE_FOR_SURVEY + '</h5><BR><BR>',
@@ -429,6 +428,23 @@
             response_ends_trial: true,
         };
 
+        let participant_keyboard_control_start = {
+            type: 'html-keyboard-response',
+            stimulus: function(){
+                let text = PREPARE_YES_KEY_PROMPT;
+                text = text.replace('%correct_key%', getCorrectKey())
+                return "<div class='instruction' >" +
+                       "<p>" + text + "</p></div>";
+            },
+            choices: function(){
+                let choice = getCorrectKey();
+                return [choice];
+            },
+            //trial_duration: 10000,
+            trial_ends_after_response: true,
+            post_trial_gap: 300,
+        };
+
         let well_done_screen = {
             type: 'html-button-response',
             stimulus: function(){
@@ -632,13 +648,20 @@
         
         // task instruction
         timeline.push(instruction_screen_practice);
+        
+        // "get ready" (https://www.youtube.com/watch?v=JwGs30cPs_A)
+        timeline.push(participant_keyboard_control_start);
+        
         timeline.push(practice_procedure);
         timeline.push(well_done_screen);
 
         // NOTE options below! comment/uncomment for regular vs restrained randomization
         // true randomness is better for the current template's amount of items...
 
-        //timeline.push(trial_procedure_pseudo_random); // don't do this with little stimuli
+        // "get ready"
+        timeline.push(participant_keyboard_control_start);
+
+        //timeline.push(trial_procedure_pseudorandom); // don't do this with little stimuli
         timeline.push(trial_procedure_random);
         timeline.push(end_screen);
 
