@@ -8,6 +8,7 @@
     <script src="https://web-experiments.lab.hum.uu.nl/jspsych/6.1.0/jspsych.js"></script>
     <script src="https://web-experiments.lab.hum.uu.nl/jspsych/6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="https://web-experiments.lab.hum.uu.nl/jspsych/6.1.0/plugins/jspsych-html-button-response.js"></script>
+    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/6.1.0/plugins/jspsych-external-html.js"></script>
 
     <!-- Generic check/ask libraries (instructions & surveys) -->
     <script src="https://web-experiments.lab.hum.uu.nl/jspsych/6.1.0/plugins/jspsych-instructions.js"></script>
@@ -267,6 +268,26 @@
                 // Repeat the survey if yes (0) was not pressed
                 repeat_survey = data.button_pressed != 0;
             }
+        };
+
+        // consent check function
+        let checkConsent = function(elem) {
+            if (document.getElementById('consent_checkbox').checked) {
+                return true;
+            } else {
+                alert(CONSENT_ALERT_MESSAGE);
+                return false;
+            }
+            return false;
+        };
+
+        let consent_page = {
+            type:'external-html',
+            url: "consent_page.html",
+            cont_btn: "start",
+            force_refresh: true,
+            check_fn: checkConsent,
+            execute_script: true
         };
 
         let select_keyboard_layout = {
@@ -638,6 +659,9 @@
         
         // survey
         timeline.push(survey_procedure);
+
+        // consent
+        timeline.push(consent_page);
         
         // kb layout
         timeline.push(select_keyboard_layout);
