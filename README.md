@@ -39,3 +39,8 @@ top ```<script>``` tags as defined in index.html, if you want your own local jsP
 4. Extract the jsPsych folder into the jspsych-vislexdec folder you extracted earlier.
 5. Inside the folder is a file called index.html, double click it in order to open it
    in a browser.
+
+# Experiment data store (server setup)
+
+Researchers and master students should be able log in to the (experiment data store)[https://experiment-datastore.lab.hum.uu.nl/] with their Solis ID. This application enables researchers to configure their jsPsych experiment to collect collect real 'production' data. The documentation for this process will appear in the [generic documentation](https://github.com/UiL-OTS-labs/jspsych-uil-template-docs).
+ 
