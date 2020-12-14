@@ -141,6 +141,25 @@
             group: group_name,
         });
 
+        // consent check function
+        let checkConsent = function(elem) {
+            if (document.getElementById('consent_checkbox').checked) {
+                return true;
+            } else {
+                alert(CONSENT_ALERT_MESSAGE);
+                return false;
+            }
+            return false;
+        };
+
+        let consent_page = {
+            type:'external-html',
+            url: "consent_page.html",
+            cont_btn: "start",
+            force_refresh: true,
+            check_fn: checkConsent,
+            execute_script: true
+        };
 
         let start_screen = {
             type: 'html-button-response',
@@ -268,26 +287,6 @@
                 // Repeat the survey if yes (0) was not pressed
                 repeat_survey = data.button_pressed != 0;
             }
-        };
-
-        // consent check function
-        let checkConsent = function(elem) {
-            if (document.getElementById('consent_checkbox').checked) {
-                return true;
-            } else {
-                alert(CONSENT_ALERT_MESSAGE);
-                return false;
-            }
-            return false;
-        };
-
-        let consent_page = {
-            type:'external-html',
-            url: "consent_page.html",
-            cont_btn: "start",
-            force_refresh: true,
-            check_fn: checkConsent,
-            execute_script: true
         };
 
         let select_keyboard_layout = {
@@ -436,6 +435,8 @@
             }
         };
 
+        ////////// experiment control /////////////////////////////////
+
         let instruction_screen_practice = {
             type: 'html-button-response',
             stimulus: function(){
@@ -577,7 +578,7 @@
             trial_duration: FEEDBACK_DURATION
         };
 
-        // procedures//////////////////////////////////////////////////////////
+        ///////////////// procedures //////////////////////////////////////////////////////////
 
         let survey_procedure = {
             timeline: [
@@ -654,15 +655,15 @@
 
         let timeline = [];
 
-        // it's best practice to have *mouse click* user I/O first
+        // consent
+        timeline.push(consent_page);
+
+        // it's genrally best practice to have *mouse click* user I/O first
         timeline.push(start_screen);
         
         // survey
         timeline.push(survey_procedure);
 
-        // consent
-        timeline.push(consent_page);
-        
         // kb layout
         timeline.push(select_keyboard_layout);
         
