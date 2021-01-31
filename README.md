@@ -51,7 +51,11 @@ The crucial trial/sub-trial phase (decision phase) output may look similar to th
 	//(...)
 ```
 
-# Experiment data store (server setup)
+# Getting started (the easy way, working internet connection required)
+For now, the easiest way to test these templates, is:
 
-Researchers and master students should be able log in to the (experiment data store)[https://experiment-datastore.lab.hum.uu.nl/] with their Solis ID. This application enables researchers to configure their jsPsych experiment to collect collect real 'production' data. The documentation for this process will appear in the [generic documentation](https://github.com/UiL-OTS-labs/jspsych-uil-template-docs).
- 
+1. Download this repository by clicking the green code button above and Download zip.
+2. Unzip at a location of your choosing.
+3. Inside the folder is a file called index.html, double click it in order to open it
+   in a browser.
+
