@@ -13,32 +13,43 @@ The participant first sees a fixation cross, then a word or a non word is presen
 
 The reaction time, response and correctness of the response are usually the important variables for analysis. By default, the data of all sub trial phases are logged in the data, but the output data can quite easily be filtered after data collection.
 
-# Getting started (the easy way, working internet connection required)
-For now, the easiest way to test these templates, is:
+# Output
 
-1. Download this repository by clicking the green code button above and Download zip.
-2. Unzip the jspsych-vislexdec-main.zip at a location of your choosing.
-3. Inside the folder is a file called index.html, double click it in order to open it
-   in a browser.
+The data of _all_ (sub) _trial phases_ are logged in the data, but the output data can be filtered after data collection in many ways.
+Please read the [general primer on jsPsych's data](https://github.com/UiL-OTS-labs/jspsych-output) if you are new to jsPsych data output.
 
-# Getting started (the harder way, local and/or custom setup)
+Essential output for the _'true experimental'_ purpose in this template are:
 
-You need this github repository and to download the jsPsych library version 6.1
-complete the following steps. When downloading and extracting folders please
-keep in mind that once working on the server, filenames are case sensitive and
-"jsPsych.js" and "jspsych.js" are two distinct filenames. It might work on your
-machine, but it might not work on the server hosting your experiment.
+- Reaction Time (RT) of the keyboard response in the decision phase
+- Correctness of the keyboard response in the decision phase
 
-You will need to adapt your own directory structure/naming convention in the 
-top ```<script>``` tags as defined in index.html, if you want your own local jsPsych setup.
+The crucial trial/sub-trial phase (decision phase) output may look similar to this:
 
-1. Download this repository by clicking the green code button above and Download zip.
-2. Unzip the jspsych-vislexdec-main.zip at a location of your choosing.
-3. Download jsPsych-6.1.0 (-6.1.0 is the version) from the jsPsych releases website
-   https://github.com/jspsych/jsPsych/releases. You might need to scroll down a little.
-4. Extract the jsPsych folder into the jspsych-vislexdec folder you extracted earlier.
-5. Inside the folder is a file called index.html, double click it in order to open it
-   in a browser.
+```json
+	{
+		"rt": 700.0000000000073,
+		"stimulus": "<p class='stimulus'>thwurp</p>",
+		"key_press": 65,
+		"condition": "NON_WORD",
+		"word": "thwurp",
+		"id": 3,
+		"trial_phase": "present_word",
+		"useful_data_flag": true,
+		"correct_response": 0,
+		"trial_type": "html-keyboard-response",
+		"trial_index": 27,
+		"time_elapsed": 45062,
+		"internal_node_id": "0.0-11.0-1.4",
+		"subject": "8oo722dq",
+		"list": "my_one_and_only_list",
+		"correct": false,
+		"key_chosen_ascii": 65,
+		"key_chosen_char": "A",
+		"yes_key": "A",
+		"no_key": "L"
+	},
+	//(...)
+```
 
 # Experiment data store (server setup)
 
