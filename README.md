@@ -13,6 +13,11 @@ The participant first sees a fixation cross, then a word or a non word is presen
 
 The reaction time, response and correctness of the response are usually the important variables for analysis. By default, the data of all sub trial phases are logged in the data, but the output data can quite easily be filtered after data collection.
 
+### Reference:
+          Rubenstein, H., Garfield, L., & Millikan, J.A. (1970). 
+          Homographic entries in the internal lexicon. 
+          Journal of Verbal Learning and Verbal Behavior, 9, 487≠494.
+
 # Output
 
 The data of _all_ (sub) _trial phases_ are logged in the data, but the output data can be filtered after data collection in many ways.
