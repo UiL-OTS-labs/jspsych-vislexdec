@@ -46,7 +46,6 @@ const PRE_PRACTICE_INSTRUCTION =
     "</ul>"                                             +
 
     "First, you can practice.<br><br>"                  +
-
     "<i>Click OK to start practicing.</i>"
     ;
 
