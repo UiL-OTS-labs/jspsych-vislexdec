@@ -5,13 +5,13 @@ Visual [Lexical Decision](https://en.wikipedia.org/wiki/Lexical_decision_task) E
 Please read the [generic documentation](https://github.com/UiL-OTS-labs/jspsych-uil-template-docs) for some context and scope.
 
 # Task Description
-
-## Short description
 The participant first sees a fixation cross, then a word or a non word is presented. Participants are instructed to respond as quickly as possible to make the decision wether the string is a word or not, using the keyboard.
 
 - The _'test stimulus'_ (called 'word') is a string of letters and can be a real word or a nonword.
 
-The reaction time, response and correctness of the response are usually the important variables for analysis. By default, the data of all sub trial phases are logged in the data, but the output data can quite easily be filtered after data collection.
+Crucial trial phases (sub trial phases):
+- Fixation cross
+- Visual item (decision phase)
 
 ### Reference:
           Rubenstein, H., Garfield, L., & Millikan, J.A. (1970). 
@@ -19,7 +19,6 @@ The reaction time, response and correctness of the response are usually the impo
           Journal of Verbal Learning and Verbal Behavior, 9, 487≠494.
 
 # Output
-
 The data of _all_ (sub) _trial phases_ are logged in the data, but the output data can be filtered after data collection in many ways.
 Please read the [general primer on jsPsych's data](https://github.com/UiL-OTS-labs/jspsych-output) if you are new to jsPsych data output.
 
