@@ -55,6 +55,31 @@ The crucial trial/sub-trial phase (decision phase) output may look similar to th
 	//(...)
 ```
 
+Variable name (key) | Description      | Unit  | Type           | Comments                             | jsPsych default | UiL OTS default  | Plugin name
+--------------------|------------------|-------|----------------|--------------------------------------|-----------------|------------------|------------
+"rt"                | Reaction Time    | ms.   | float          | milliseconds                         | yes             |                  |            
+stimulus"           | stimulus (html)  |       | string/html    |                                      | yes             |                  |
+"key_press"         | Keyboard response|       | ASCII keyboard | https://en.wikipedia.org/wiki/ASCII  | yes             |                  | html-keyboard-response
+
+//
+		"condition": "NON_WORD",
+		"word": "thwurp",
+		"id": 3,
+		"trial_phase": "present_word",
+		"useful_data_flag": true,
+		"correct_response": 0,
+		"trial_type": "html-keyboard-response",
+		"trial_index": 27,
+		"time_elapsed": 45062,
+		"internal_node_id": "0.0-11.0-1.4",
+		"subject": "8oo722dq",
+		"list": "my_one_and_only_list",
+		"correct": false,
+		"key_chosen_ascii": 65,
+		"key_chosen_char": "A",
+		"yes_key": "A",
+		"no_key": "L"
+	},
 # Getting started 
 People _affiliated with our lab_ can use the information [from our lab webiste](https://uilots-labs.wp.hum.uu.nl/experiments/overview/) and expand the "Online experiments using jsPsych" section for details. Please follow [this how-to](https://uilots-labs.wp.hum.uu.nl/how-to/online-experimenting/).
 
