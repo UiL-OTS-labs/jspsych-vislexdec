@@ -47,6 +47,7 @@ The crucial trial/sub-trial phase (decision phase) output may look similar to th
 		"subject": "8oo722dq",
 		"list": "my_one_and_only_list",
 		"correct": false,
+		"integer_correct": 0,
 		"key_chosen_ascii": 65,
 		"key_chosen_char": "A",
 		"yes_key": "A",
@@ -73,6 +74,7 @@ _"expected_answer"_ | TODO change!         |       | todo           | Now (still
 "subject"           | Subject ID           |       |                | For instance: "8oo722dq"             |                 | yes              |
 "list"              | Stimulus list name.  |       | string         | For instance: "my_one_and_only_list" | no              | yes              | 
 "correct"           | Scoring result       |       | Boolean        | 'true or false' score of response    |                 | yes              |   
+"integer_correct"   | Scoring result       |       | integer        | 1 or 0 for correct or incorrect      |                 | yes              |   
 "key_chosen_ascii"  |                      |       |                | For instance: 65                     | no              | yes              |
 "key_chosen_char"   |                      |       |                | For instance: "A"                    | no              | yes              |
 "yes_key"           |                      |       |                | For instance:  "A"                   | no              | yes              |
