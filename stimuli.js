@@ -8,8 +8,7 @@ const REAL_WORD = "REAL_WORD";
 const PRACTICE = "PRACTICE";
 
 const LISTS = [
-  'A',
-  'B'
+    "my_one_and_only_list"
 ];
 
 // In case of more complex design, the above could be, for example:
@@ -25,33 +24,31 @@ const PRACTICE_ITEMS = [
 ];
 
 const LIST_1 = [
-    { id: 1, item_type: NON_WORD, word: "list_a", correct: 0 },
+    { id: 1, item_type: NON_WORD, word: "slirque", correct: 0 },
+    { id: 2, item_type: NON_WORD, word: "crawse", correct: 0 },
+    { id: 3, item_type: NON_WORD, word: "thwurp", correct: 0 },
+    { id: 4, item_type: NON_WORD, word: "clem", correct: 0},
+    { id: 5, item_type: REAL_WORD, word: "white", correct: 1 },
+    { id: 6, item_type: REAL_WORD, word: "travel", correct: 1 },
+    { id: 7, item_type: REAL_WORD, word: "letter", correct: 1 },
+    { id: 8, item_type: REAL_WORD, word: "clown", correct: 1 }
 ];
 
-const LIST_2 = [
-    { id: 1, item_type: NON_WORD, word: "list_b", correct: 0 },
-];
 
-// const TEST_ITEMS = [
-//     {list_name: LISTS[0], table: LIST_1}
-// ];
+const TEST_ITEMS = [
+    {list_name: LISTS[0], table: LIST_1}
+];
 
 // If there were two lists to choose from:
 
-const TEST_ITEMS = [
-    {list_name: LISTS[0], table: LIST_1},
-    {list_name: LISTS[1], table: LIST_2}
-];
+// const TEST_ITEMS = [
+//     {list_name: LISTS[0], table: LIST_1},
+//     {list_name: LISTS[1], table: LIST_2}
+// ];
 
 
 function getPracticeItems() {
     return {list_name : "practice", table : PRACTICE_ITEMS};
-}
-
-function findList(name) {
-  for(let i=0; i<TEST_ITEMS.length; i++) {
-    if (TEST_ITEMS[i].list_name == name) return TEST_ITEMS[i];
-  }
 }
 
 function pickRandomList() {
