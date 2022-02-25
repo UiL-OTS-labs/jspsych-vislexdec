@@ -19,19 +19,19 @@ const LISTS = [
 // ];
 
 const PRACTICE_ITEMS = [
-    { id: 1, item_type: PRACTICE, word: "palve", correct: 0 },
-    { id: 2, item_type: PRACTICE, word: "hot", correct: 1 }
+    { id: 1, item_type: PRACTICE, word: "palve", expected_answer: 0 },
+    { id: 2, item_type: PRACTICE, word: "hot", expected_answer: 1 }
 ];
 
 const LIST_1 = [
-    { id: 1, item_type: NON_WORD, word: "slirque", correct: 0 },
-    { id: 2, item_type: NON_WORD, word: "crawse", correct: 0 },
-    { id: 3, item_type: NON_WORD, word: "thwurp", correct: 0 },
-    { id: 4, item_type: NON_WORD, word: "clem", correct: 0},
-    { id: 5, item_type: REAL_WORD, word: "white", correct: 1 },
-    { id: 6, item_type: REAL_WORD, word: "travel", correct: 1 },
-    { id: 7, item_type: REAL_WORD, word: "letter", correct: 1 },
-    { id: 8, item_type: REAL_WORD, word: "clown", correct: 1 }
+    { id: 1, item_type: NON_WORD, word: "slirque", expected_answer: 0 },
+    { id: 2, item_type: NON_WORD, word: "crawse", expected_answer: 0 },
+    { id: 3, item_type: NON_WORD, word: "thwurp", expected_answer: 0 },
+    { id: 4, item_type: NON_WORD, word: "clem", expected_answer: 0},
+    { id: 5, item_type: REAL_WORD, word: "white", expected_answer: 1 },
+    { id: 6, item_type: REAL_WORD, word: "travel", expected_answer: 1 },
+    { id: 7, item_type: REAL_WORD, word: "letter", expected_answer: 1 },
+    { id: 8, item_type: REAL_WORD, word: "clown", expected_answer: 1 }
 ];
 
 
@@ -65,3 +65,4 @@ function pickRandomList() {
     var retlist = TEST_ITEMS[shuffled_range[0]];
     return retlist
 }
+
